@@ -4,6 +4,9 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+app.get('/sai',function(req,res){
+    res.send("sai nagendra");
+})
 
 app.get('/', function (req, res) {
   res.sendFile(path.resolve(__dirname,'ui/index.html'));
